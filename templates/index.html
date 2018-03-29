@@ -2,10 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>标题</title>
+    <title>四大名著列表</title>
 </head>
 <body>
-我是网页内容
-<p> 我的名字是 {{ name }}</p>
+
+<table>
+    <thead>
+    <th>书名</th>
+    <th>作者</th>
+    <th>价格</th>
+    </thead>
+
+    <tbody>
+
+        {% for book in books %}
+       <tr>
+       <td> {{ book.name}}</td>
+       <td> {{ book.author}}</td>
+       <td> {{ book.price}}</td>
+
+       </tr>
+        {% endfor %}
+
+
+
+
+    </tbody>
+
+
+</table>
+
 </body>
 </html>
